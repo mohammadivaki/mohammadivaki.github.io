@@ -10,7 +10,7 @@
     <style>
         body {
             font-family: "Computer Modern Sans", sans-serif;
-            line-height: 1.6;
+            line-height: 1.6; /* Consistent line height */
             margin: 0;
             padding: 0;
             background-color: #dcdcdc; /* Light gray background */
@@ -43,6 +43,13 @@
         }
         a {
             color: #00a0a0; /* Custom link color */
+        }
+        h2 {
+            margin-top: 0; /* Remove margin above h2 */
+            margin-bottom: 15px; /* Add consistent space below h2 */
+        }
+        p, li {
+            margin: 10px 0; /* Consistent margin for paragraphs and list items */
         }
 
         /* Responsive Styles */
@@ -123,6 +130,7 @@
             </div>
             <img src="image.jpg" alt="Mohammad N. Ivaki" class="profile-image">
         </section>
+        
         <section id="publications" class="content">
             <h2>Selected Publications</h2>
             <ul>
