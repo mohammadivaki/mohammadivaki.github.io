@@ -96,28 +96,28 @@
     #about {
         display: flex; /* Use flexbox layout */
         align-items: center; /* Align items vertically centered */
+        justify-content: space-between; /* Space between heading and image */
     }
-    
+
     .profile-image {
-        max-width: 200px; /* Limit the size of the image */
+        max-width: 150px; /* Limit the size of the image */
         border-radius: 10px; /* Rounded corners */
-        margin-left: 20px; /* Space between image and text */
-        margin-bottom: 10px; /* Space below the image */
+        margin-left: 20px; /* Space between image and heading */
     }
 
     .about-text {
-        flex: 1; /* Allow text to take available space */
+        flex-grow: 1; /* Allow text to take available space */
     }
 </style>
 
 <section id="about" class="content">
-    <img src="image.jpg" alt="Mohammad N. Ivaki" class="profile-image">
     <div class="about-text">
         <h2>About</h2>
         <p>Assistant Professor, Technische Universität Wien, Austria</p>
         <p>Interests: Geometric flows, Partial Differential Equations, Convex geometry</p>
         <p>Email: <a href="mailto:mohammad.ivaki@tuwien.ac.at">mohammad.ivaki@tuwien.ac.at</a></p>
     </div>
+    <img src="path/to/your/image.jpg" alt="Mohammad N. Ivaki" class="profile-image">
 </section>
         <section id="publications" class="content">
             <h2>Selected Publications</h2>
