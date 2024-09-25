@@ -88,19 +88,20 @@
         /* About section styles */
         #about {
             display: flex; /* Use flexbox layout */
-            align-items: center; /* Align items vertically centered */
-            justify-content: space-between; /* Space between heading and image */
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
             margin-bottom: 20px; /* Add some space below the About section */
         }
 
         .profile-image {
             max-width: 150px; /* Limit the size of the image */
             border-radius: 10px; /* Rounded corners */
-            margin-left: 20px; /* Space between image and heading */
+            margin-top: 10px; /* Space between the logo and profile image */
         }
 
         .about-text {
-            flex-grow: 1; /* Allow text to take available space */
+            text-align: center; /* Center the text below the logo */
+            margin-bottom: 10px; /* Space below the about text */
         }
 
         /* Awards section styles */
