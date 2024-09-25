@@ -14,17 +14,14 @@
             margin: 0;
             padding: 0;
             background-color: #dcdcdc; /* Light gray background */
-            position: relative; /* Added for positioning the logo */
-            min-height: 100vh; /* Ensure the body takes full height */
         }
         header {
             background: #262626; /* Dark gray background */
             color: #f5f5f5; /* Whitish gray text */
             padding: 10px 20px; /* Added padding for spacing */
+            border-bottom: #77aaff 3px solid;
             display: flex;
             align-items: center; /* Align items vertically centered */
-            justify-content: center; /* Center the title */
-            position: relative; /* Position relative for header */
         }
         .header-title {
             flex-grow: 1; /* Allow title to grow */
@@ -34,11 +31,17 @@
             margin: 0;
             font-size: 24px;
         }
+        header .logo {
+            width: 100%; /* Full width for the logo */
+            max-width: 200px; /* Limit max width to ensure it fits well */
+            height: auto; /* Maintain aspect ratio */
+            object-fit: contain; /* Ensure the logo is contained without distortion */
+        }
         .profile-image {
             max-width: 120px; /* Adjusted size of the profile image */
             height: auto; /* Maintain aspect ratio */
             border-radius: 10px; /* Rounded corners */
-            margin-left: 20px; /* Space between image and title */
+            margin-right: 20px; /* Space between image and title */
         }
         .container {
             width: 80%;
@@ -74,6 +77,9 @@
                 font-size: 20px;
                 margin-bottom: 10px; /* Space between title and logo */
             }
+            header .logo {
+                max-width: 150px; /* Slightly smaller logo for mobile */
+            }
             .profile-image {
                 max-width: 100px; /* Smaller profile image for mobile */
             }
@@ -82,6 +88,9 @@
         @media (max-width: 480px) {
             header h1 {
                 font-size: 18px; /* Smaller font for very small screens */
+            }
+            header .logo {
+                max-width: 120px; /* Even smaller logo for mobile */
             }
         }
 
@@ -110,21 +119,15 @@
         #awards li {
             margin-bottom: 8px; /* Space between award items */
         }
-
-        /* Logo positioning */
-        .logo-container {
-            position: absolute; /* Position absolute for the logo */
-            bottom: 20px; /* Distance from the bottom */
-            right: 20px; /* Distance from the right */
-        }
     </style>
 </head>
 <body>
     <header>
+        <img src="image.jpg" alt="Mohammad N. Ivaki" class="profile-image"> <!-- Profile picture on the left -->
         <div class="header-title">
             <h1>Mohammad N. Ivaki</h1>
         </div>
-        <img src="image.jpg" alt="Mohammad N. Ivaki" class="profile-image"> <!-- Profile picture on the right -->
+        <img src="TU-Logo.png" alt="Logo" class="logo"> <!-- Logo on the right -->
     </header>
     <div class="container">
         <section id="about" class="content">
