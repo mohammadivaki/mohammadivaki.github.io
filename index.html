@@ -43,6 +43,8 @@
             padding: 20px;
             background: #dcdcdc; /* Light gray background */
             margin-top: 20px;
+            display: flex; /* Use flexbox for layout */
+            align-items: flex-start; /* Align items at the start */
         }
         a {
             color: #00a0a0; /* Custom link color */
@@ -82,6 +84,8 @@
             }
             .content {
                 padding: 15px;
+                flex-direction: column; /* Stack items vertically for mobile */
+                align-items: center; /* Center items horizontally */
             }
         }
 
@@ -89,18 +93,20 @@
         #about {
             display: flex; /* Use flexbox layout */
             flex-direction: column; /* Stack items vertically */
-            align-items: center; /* Center items horizontally */
+            align-items: flex-start; /* Align items to the start */
             margin-bottom: 20px; /* Add some space below the About section */
+            flex: 1; /* Allow the about section to grow */
         }
 
         .profile-image {
             max-width: 150px; /* Limit the size of the image */
             border-radius: 10px; /* Rounded corners */
+            margin-left: auto; /* Align to the right */
             margin-top: 10px; /* Space between the logo and profile image */
         }
 
         .about-text {
-            text-align: center; /* Center the text below the logo */
+            text-align: left; /* Left align the text */
             margin-bottom: 10px; /* Space below the about text */
         }
 
@@ -134,7 +140,6 @@
             </div>
             <img src="image.jpg" alt="Mohammad N. Ivaki" class="profile-image">
         </section>
-        
         <section id="publications" class="content">
             <h2>Selected Publications</h2>
             <ul>
