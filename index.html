@@ -21,7 +21,6 @@
             padding: 10px 20px; /* Added padding for spacing */
             border-bottom: #77aaff 3px solid;
             display: flex;
-            justify-content: space-between; /* Space between logo and profile image */
             align-items: center; /* Align items vertically centered */
         }
         .header-title {
@@ -41,7 +40,7 @@
         .profile-image {
             max-width: 150px; /* Limit the size of the image */
             border-radius: 10px; /* Rounded corners */
-            margin-left: 20px; /* Space between image and header edge */
+            margin-right: 20px; /* Space between image and title */
         }
         .container {
             width: 80%;
@@ -123,11 +122,11 @@
 </head>
 <body>
     <header>
+        <img src="image.jpg" alt="Mohammad N. Ivaki" class="profile-image"> <!-- Profile picture on the left -->
         <div class="header-title">
             <h1>Mohammad N. Ivaki</h1>
         </div>
-        <img src="TU-Logo.png" alt="Logo" class="logo">
-        <img src="image.jpg" alt="Mohammad N. Ivaki" class="profile-image">
+        <img src="TU-Logo.png" alt="Logo" class="logo"> <!-- Logo on the right -->
     </header>
     <div class="container">
         <section id="about" class="content">
