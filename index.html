@@ -10,39 +10,34 @@
     <style>
         body {
             font-family: "Computer Modern Sans", sans-serif;
-            line-height: 1.2; /* Decreased line height */
+            line-height: 1.2;
             margin: 0;
             padding: 0;
-            background-color: #dcdcdc; /* Light gray background */
+            background-color: #dcdcdc;
         }
         header {
-            background: #262626; /* Dark gray background */
-            color: #f5f5f5; /* Whitish gray text */
-            padding: 10px 20px; /* Added padding for spacing */
+            background: #262626;
+            color: #f5f5f5;
+            padding: 10px 20px;
             border-bottom: #77aaff 3px solid;
             display: flex;
-            align-items: center; /* Align items vertically centered */
-            justify-content: space-between; /* Space between logo and title */
-        }
-        .header-title {
-            flex-grow: 1; /* Allow title to grow */
-            text-align: center; /* Center align the title */
+            justify-content: space-between;
+            align-items: center;
         }
         header h1 {
             margin: 0;
             font-size: 24px;
         }
         header .logo {
-            width: 100%; /* Full width for the logo */
-            max-width: 200px; /* Limit max width to ensure it fits well */
-            height: auto; /* Maintain aspect ratio */
-            object-fit: contain; /* Ensure the logo is contained without distortion */
+            max-width: 200px;
+            height: auto;
+            object-fit: contain;
         }
         .profile-image {
-            max-width: 120px; /* Adjusted size of the profile image */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 10px; /* Rounded corners */
-            margin-right: 20px; /* Space between image and title */
+            max-width: 120px;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 20px;
         }
         .container {
             width: 80%;
@@ -51,88 +46,74 @@
         }
         .content {
             padding: 20px;
-            background: #dcdcdc; /* Light gray background */
+            background: #f5f5f5;
             margin-top: 20px;
+            border-radius: 10px;
         }
         a {
-            color: #00a0a0; /* Custom link color */
+            color: #00a0a0;
         }
-        h2 {
-            margin-top: 0; /* Remove margin above h2 */
-            margin-bottom: 10px; /* Add consistent space below h2 */
+        h2, h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
         }
         p, li {
-            margin: 8px 0; /* Adjusted margin for paragraphs and list items */
+            margin: 8px 0;
+        }
+        #about {
+            margin-bottom: 20px;
+        }
+        #about img {
+            display: block;
+            margin: 20px auto 0;
+        }
+        #awards ul, #talks ul, #publications ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #awards li, #talks li, #publications li {
+            margin-bottom: 8px;
         }
 
         /* Responsive Styles */
         @media (max-width: 768px) {
             .container {
-                width: 95%; /* More space for smaller screens */
+                width: 95%;
             }
             header {
-                flex-direction: column; /* Stack content vertically */
-                padding: 20px;
-            }
-            header h1 {
-                font-size: 20px;
-                margin-bottom: 10px; /* Space between title and logo */
-            }
-            header .logo {
-                max-width: 150px; /* Slightly smaller logo for mobile */
+                flex-direction: column;
+                align-items: flex-start;
             }
             .profile-image {
-                max-width: 100px; /* Smaller profile image for mobile */
+                max-width: 100px;
+            }
+            header .logo {
+                max-width: 150px;
             }
         }
 
         @media (max-width: 480px) {
             header h1 {
-                font-size: 18px; /* Smaller font for very small screens */
+                font-size: 18px;
             }
             header .logo {
-                max-width: 120px; /* Even smaller logo for mobile */
+                max-width: 120px;
             }
-        }
-
-        /* About section styles */
-        #about {
-            display: flex; /* Use flexbox layout */
-            flex-direction: column; /* Stack items vertically */
-            margin-bottom: 20px; /* Add some space below the About section */
-        }
-
-        .about-text {
-            text-align: left; /* Left align the text */
-            margin-bottom: 10px; /* Space below the about text */
-        }
-
-        /* Awards section styles */
-        #awards {
-            margin-top: 20px;
-        }
-
-        #awards ul {
-            list-style-type: none; /* Remove default list styles */
-            padding: 0; /* Remove padding */
-        }
-
-        #awards li {
-            margin-bottom: 8px; /* Space between award items */
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="header-title">
+        <div>
             <h1>Mohammad N. Ivaki</h1>
+            <img src="TU-Logo.png" alt="Logo" class="logo"> <!-- TU Logo -->
         </div>
-        <img src="image.jpg" alt="Mohammad N. Ivaki" class="profile-image"> <!-- Profile picture on the left -->
-        <img src="TU-Logo.png" alt="Logo" class="logo"> <!-- Logo on the right -->
+        <img src="image.jpg" alt="Mohammad N. Ivaki" class="profile-image"> <!-- Profile image -->
     </header>
+
     <div class="container">
         <section id="about" class="content">
-            <div class="about-text">
+            <div>
                 <h3>About</h3>
                 <p>Assistant Professor, Technische Universität Wien, Austria</p>
                 <p>Interests: Geometric flows, Partial Differential Equations, Convex geometry</p>
@@ -143,7 +124,7 @@
         <section id="publications" class="content">
             <h3>Selected Publications</h3>
             <ul>
-                <li>New quermassintegral and Poincaré type inequalities for non-convex domains (with Y. Hu), <a href="https://arxiv.org/pdf/2408.06057">arXiv</a> (2024).</li>
+                 <li>New quermassintegral and Poincaré type inequalities for non-convex domains (with Y. Hu), <a href="https://arxiv.org/pdf/2408.06057">arXiv</a> (2024).</li>
                 <li>Stability of the cone-volume measure with near constant density (with Y. Hu), <a href="https://arxiv.org/pdf/2408.06172">arXiv</a> (2024).</li>
                 <li>Prescribed L<sub>p</sub> curvature problem (with Y. Hu), <a href="https://doi.org/10.1016/j.aim.2024.109566">Adv. Math.</a> 442(2024): #109566.</li>
                 <li>On the uniqueness of solutions to the isotropic L<sub>p</sub> dual Minkowski problem (with Y. Hu), <a href="https://doi.org/10.1016/j.na.2024.113493">Nonlinear Anal.</a> 241(2024): #113493.</li>
@@ -168,13 +149,13 @@
                 <li>The planar Busemann-Petty centroid inequality and its stability, <a href="https://doi.org/10.1090/tran/6503">Trans. Amer. Math. Soc.</a> 368(2016): 3539-3563.</li>
                 <li>Centro-affine normal flows on curves: Harnack estimates and ancient solutions, <a href="https://doi.org/10.1016/j.anihpc.2014.07.001">Ann. I. H. Poincaré</a> 32(2015): 1189-1197.</li>
                 <li>Stability of the Blaschke-Santaló inequality in the plane, <a href="https://doi.org/10.1007/s00605-014-0651-1">Monatsh. Math.</a> 177(2015): 451-459.</li>
-         </ul>
+            </ul>
         </section>
-  
+
         <section id="talks" class="content">
             <h3>Talks</h3>
             <ul>
-                <li>07.2024. Bridging PDE and Geometric Flows, Cardiff University, Wales.</li>
+               <li>07.2024. Bridging PDE and Geometric Flows, Cardiff University, Wales.</li>
                 <li>06.2024. Current trends in Geometric flows, Montreal, Canada.</li>
                 <li>06.2024. 41. Süddeutsches Kolloquium über Differentialgeometrie, Frankfurt, Germany.</li>
                 <li>05.2024. Conference on Convex Geometry and Related PDEs, Hunan University, China.</li>
@@ -207,22 +188,23 @@
                 <li>09.2013. Conference on Convex Geometry, Castro Urdiales, Spain.</li>
                 <li>05.2013. XVI-th ISM-Quebec Student Conference, Montreal, Canada.</li>
                 <li>04.2012. Workshop on Convexity and Asymptotic Geometric Analysis, CRM, Montreal, Canada.</li>
-     </ul>
+            </ul>
         </section>
-  <section id="awards" class="content">
-    <h3>Awards and Recognitions</h3>
-    <ul>
-        <li>10.2023. Best paper award 2022, Faculty of Mathematics and Geoinformation, TU Wien.</li>
-        <li>11.2022. Austrian Science Fund (FWF) project, Award number P36545.</li>
-        <li>10.2022. Best paper award 2021, Faculty of Mathematics and Geoinformation, TU Wien.</li>
-        <li>2017. <a href="https://www.fields.utoronto.ca/honours-and-fellowships/jerrold-e-marsden-postdoctoral-fellows">Jerrold E. Marsden Fellowship</a>, Fields Institute. Know more about <a href="https://en.wikipedia.org/wiki/Jerrold_E._Marsden">J.E. Marsden!</a></li>
-        <li>10.2016. Best paper award 2015, Faculty of Mathematics and Geoinformation, TU Wien.</li>
-        <li>2014-2016. Lise Meitner program (Austrian Science Fund). Know more about <a href="https://en.wikipedia.org/wiki/Lise_Meitner">Lise Meitner!</a></li>
-        <li>2013. The <a href="http://ism.uqam.ca/~ism/about/carl-herz-foundation/carl-herz-prize/">Carl Herz Prize</a>. Know more about <a href="https://en.wikipedia.org/wiki/Carl_S._Herz">Carl Herz!</a></li>
-        <li>2006. Silver Medal: 30th Mathematics Competition for University Students, Tafresh, Iran.</li>
-        <li>2005. Silver Medal: 29th Mathematics Competition for University Students, Mazandaran, Iran.</li>
-    </ul>
-</section>
+
+        <section id="awards" class="content">
+            <h3>Awards and Recognitions</h3>
+            <ul>
+                <li>10.2023. Best paper award 2022, Faculty of Mathematics and Geoinformation, TU Wien.</li>
+                <li>11.2022. Austrian Science Fund (FWF) project, Award number P36545.</li>
+                <li>10.2022. Best paper award 2021, Faculty of Mathematics and Geoinformation, TU Wien.</li>
+                <li>2017. <a href="https://www.fields.utoronto.ca/honours-and-fellowships/jerrold-e-marsden-postdoctoral-fellows">Jerrold E. Marsden Fellowship</a>, Fields Institute. Know more about <a href="https://en.wikipedia.org/wiki/Jerrold_E._Marsden">J.E. Marsden!</a></li>
+                <li>10.2016. Best paper award 2015, Faculty of Mathematics and Geoinformation, TU Wien.</li>
+                <li>2014-2016. Lise Meitner program (Austrian Science Fund). Know more about <a href="https://en.wikipedia.org/wiki/Lise_Meitner">Lise Meitner!</a></li>
+                <li>2013. The <a href="http://ism.uqam.ca/~ism/about/carl-herz-foundation/carl-herz-prize/">Carl Herz Prize</a>. Know more about <a href="https://en.wikipedia.org/wiki/Carl_S._Herz">Carl Herz!</a></li>
+                <li>2006. Silver Medal: 30th Mathematics Competition for University Students, Tafresh, Iran.</li>
+                <li>2005. Silver Medal: 29th Mathematics Competition for University Students, Mazandaran, Iran.</li>
+            </ul>
+        </section>
     </div>
 </body>
 </html>
