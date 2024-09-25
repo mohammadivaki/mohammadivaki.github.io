@@ -1,20 +1,21 @@
-# Mathematician's Hub
+# Mathematician's Website
 
-A simple website for mathematicians to explore articles, problem sets, and interactive tools.
-
-## Structure
-
-- `index.html`: The main HTML file.
-- `css/styles.css`: The CSS file for styling.
-- `js/scripts.js`: The JavaScript file for interactivity.
-- `README.md`: This file.
+This is a simple website for displaying mathematical expressions using MathJax.
 
 ## How to Use
 
-1. Clone the repository.
-2. Open `index.html` in your web browser.
-3. Explore the different sections of the website.
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/your-username/math-website.git
+    ```
 
-## Contributing
+2. Open `index.html` in your web browser to see the rendered mathematical expressions.
 
-Feel free to fork this repository and submit pull requests. Contributions are welcome!
+## Examples
+
+Inline equation: \( E = mc^2 \)
+
+Block equation:
+$$
+\int_{a}^{b} x^2 \, dx
+$$
