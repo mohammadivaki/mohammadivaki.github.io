@@ -26,12 +26,14 @@
             min-height: 70px;
             border-bottom: #77aaff 3px solid;
             display: flex;
-            justify-content: space-between;
             align-items: center;
         }
         header h1 {
             margin: 0;
             font-size: 24px;
+        }
+        header nav {
+            margin-left: auto; /* Push the logo to the right */
         }
         header a {
             color: #f5f5f5;
@@ -42,14 +44,14 @@
         header ul {
             padding: 0;
             list-style: none;
-            display: flex;
         }
         header li {
             display: inline;
             padding: 0 20px;
         }
-        header .logo {
+        header img {
             max-height: 60px; /* Adjust the height of the logo */
+            margin-left: 20px; /* Add some space between the navigation and the logo */
         }
         .content {
             padding: 20px;
@@ -64,8 +66,8 @@
 <body>
     <header>
         <div class="container">
-             <!-- Logo added here -->
-             <a href="https://getlogo.net/tu-wien-logo-vector-svg/" target="_blank"><img src="https://getlogo.net/wp-content/uploads/2019/05/tu-wien-logo-vector.png" /></a>
+            <!-- Logo added here to be on the right -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/TU_Wien-Logo.svg" alt="Logo">
             <h1>Mohammad N. Ivaki</h1>
             <nav>
                 <ul>
@@ -76,7 +78,6 @@
             </nav>
         </div>
     </header>
-
     <div class="container">
         <section id="about" class="content">
             <h2>About</h2>
