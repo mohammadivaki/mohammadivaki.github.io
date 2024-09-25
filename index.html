@@ -26,14 +26,12 @@
             min-height: 70px;
             border-bottom: #77aaff 3px solid;
             display: flex;
+            justify-content: space-between;
             align-items: center;
         }
         header h1 {
             margin: 0;
             font-size: 24px;
-        }
-        header nav {
-            margin-left: auto; /* Push the logo to the right */
         }
         header a {
             color: #f5f5f5;
@@ -44,6 +42,7 @@
         header ul {
             padding: 0;
             list-style: none;
+            display: flex;
         }
         header li {
             display: inline;
@@ -51,7 +50,6 @@
         }
         header .logo {
             max-height: 60px; /* Adjust the height of the logo */
-            margin-left: 20px; /* Add space between the navigation and the logo */
         }
         .content {
             padding: 20px;
@@ -68,16 +66,16 @@
         <div class="container">
             <h1>Mohammad N. Ivaki</h1>
             <nav>
+                            <!-- Logo section -->
+            <a href="https://your-website-link.com">
+                <img src="path/to/your/logo.png" alt="Logo" class="logo">
+            </a>
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#publications">Publications</a></li>
                     <li><a href="#talks">Talks</a></li>
                 </ul>
             </nav>
-            <!-- Logo as a clickable link -->
-            <a href="https://your-website-link.com">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/TU_Wien-Logo.svg" alt="Logo" class="logo">
-            </a>
         </div>
     </header>
 
