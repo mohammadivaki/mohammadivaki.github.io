@@ -1,15 +1,6 @@
 # Mathematician's Website
 
-This is a simple website for displaying mathematical expressions using MathJax.
-
-## How to Use
-
-1. Clone the repository:
-    ```sh
-    git clone https://github.com/your-username/math-website.git
-    ```
-
-2. Open `index.html` in your web browser to see the rendered mathematical expressions.
+This is a simple website for a simple Mathematician.
 
 ## Examples
 
