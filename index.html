@@ -10,39 +10,40 @@
     <style>
         body {
             font-family: "Computer Modern Sans", sans-serif;
-            line-height: 1.2; /* Decreased line height */
+            line-height: 1.5;
             margin: 0;
             padding: 0;
-            background-color: #dcdcdc; /* Light gray background */
+            background-color: #dcdcdc;
         }
         header {
-            background: #262626; /* Dark gray background */
-            color: #f5f5f5; /* Whitish gray text */
-            padding: 10px 20px; /* Added padding for spacing */
+            background: #262626;
+            color: #f5f5f5;
+            padding: 20px;
             border-bottom: #77aaff 3px solid;
             display: flex;
-            align-items: center; /* Align items vertically centered */
-            justify-content: space-between; /* Space between logo and title */
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
         }
-        .header-title {
-            flex-grow: 1; /* Allow title to grow */
-            text-align: center; /* Center align the title */
+        header .header-title {
+            text-align: left;
+            flex-grow: 1;
         }
         header h1 {
             margin: 0;
-            font-size: 24px;
+            font-size: 28px;
         }
         header .logo {
-            width: 100%; /* Full width for the logo */
-            max-width: 200px; /* Limit max width to ensure it fits well */
-            height: auto; /* Maintain aspect ratio */
-            object-fit: contain; /* Ensure the logo is contained without distortion */
+            max-width: 150px;
+            height: auto;
+            margin-left: 20px;
         }
         .profile-image {
-            max-width: 120px; /* Adjusted size of the profile image */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 10px; /* Rounded corners */
-            margin-right: 20px; /* Space between image and title */
+            max-width: 120px;
+            height: auto;
+            border-radius: 10px;
+            margin-left: auto;
+            margin-right: 20px;
         }
         .container {
             width: 80%;
@@ -51,75 +52,57 @@
         }
         .content {
             padding: 20px;
-            background: #dcdcdc; /* Light gray background */
+            background: #f2f2f2;
             margin-top: 20px;
-            text-align: center; /* Center align all text in content sections */
+            text-align: center;
         }
         a {
-            color: #00a0a0; /* Custom link color */
+            color: #00a0a0;
         }
         h2 {
-            margin-top: 0; /* Remove margin above h2 */
-            margin-bottom: 10px; /* Add consistent space below h2 */
+            margin-top: 0;
+            margin-bottom: 10px;
         }
         p, li {
-            margin: 8px 0; /* Adjusted margin for paragraphs and list items */
+            margin: 8px 0;
+        }
+
+        /* Flexbox alignment for section content */
+        #about, #publications, #awards {
+            text-align: left;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
         }
 
         /* Responsive Styles */
         @media (max-width: 768px) {
             .container {
-                width: 95%; /* More space for smaller screens */
+                width: 95%;
             }
             header {
-                flex-direction: column; /* Stack content vertically */
-                padding: 20px;
+                flex-direction: column;
+                text-align: center;
             }
-            header h1 {
-                font-size: 20px;
-                margin-bottom: 10px; /* Space between title and logo */
-            }
-            header .logo {
-                max-width: 150px; /* Slightly smaller logo for mobile */
+            header .header-title {
+                margin-bottom: 10px;
             }
             .profile-image {
-                max-width: 100px; /* Smaller profile image for mobile */
+                margin: 0 auto 20px;
             }
         }
 
         @media (max-width: 480px) {
             header h1 {
-                font-size: 18px; /* Smaller font for very small screens */
+                font-size: 20px;
             }
             header .logo {
-                max-width: 120px; /* Even smaller logo for mobile */
+                max-width: 100px;
             }
-        }
-
-        /* About section styles */
-        #about {
-            display: flex; /* Use flexbox layout */
-            flex-direction: column; /* Stack items vertically */
-            margin-bottom: 20px; /* Add some space below the About section */
-        }
-
-        .about-text {
-            text-align: center; /* Center align the text */
-            margin-bottom: 10px; /* Space below the about text */
-        }
-
-        /* Awards section styles */
-        #awards {
-            margin-top: 20px;
-        }
-
-        #awards ul {
-            list-style-type: none; /* Remove default list styles */
-            padding: 0; /* Remove padding */
-        }
-
-        #awards li {
-            margin-bottom: 8px; /* Space between award items */
+            .profile-image {
+                max-width: 80px;
+            }
         }
     </style>
 </head>
@@ -128,17 +111,16 @@
         <div class="header-title">
             <h1>Mohammad N. Ivaki</h1>
         </div>
-        <img src="image.jpg" alt="Mohammad N. Ivaki" class="profile-image"> <!-- Profile picture on the left -->
-        <img src="TU-Logo.png" alt="Logo" class="logo"> <!-- Logo on the right -->
+        <img src="TU-Logo.png" alt="TU Logo" class="logo">
+        <img src="image.jpg" alt="Profile Picture" class="profile-image">
     </header>
+
     <div class="container">
         <section id="about" class="content">
-            <div class="about-text">
-                <h2>About</h2>
-                <p>Assistant Professor, Technische Universität Wien, Austria</p>
-                <p>Interests: Geometric flows, Partial Differential Equations, Convex geometry</p>
-                <p>Email: <a href="mailto:mohammad.ivaki@tuwien.ac.at">mohammad.ivaki@tuwien.ac.at</a></p>
-            </div>
+            <h2>About</h2>
+            <p>Assistant Professor, Technische Universität Wien, Austria</p>
+            <p>Interests: Geometric flows, Partial Differential Equations, Convex geometry</p>
+            <p>Email: <a href="mailto:mohammad.ivaki@tuwien.ac.at">mohammad.ivaki@tuwien.ac.at</a></p>
         </section>
 
         <section id="publications" class="content">
