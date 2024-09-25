@@ -10,49 +10,92 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
-        h1, h2, h3 {
-            color: #333;
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
         }
-        .publication {
-            margin-bottom: 15px;
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        .content {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>Mohammad N. Ivaki</h1>
-    <p>Assistant Professor, Technische Universität Wien, Austria</p>
-    <p>Interests: Geometric flows, Partial Differential Equations, Convex geometry</p>
-
-    <h2>Selected Publications</h2>
-    <div class="publication">
-        <p>Prescribed L<sup>p</sup> curvature problem (with Y. Hu), <em>Adv. Math.</em> 442 (2024): #109566.</p>
+    <header>
+        <div class="container">
+            <h1>Mohammad N. Ivaki</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#teaching">Teaching</a></li>
+                    <li><a href="#talks">Talks</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <section id="about" class="content">
+            <h2>About</h2>
+            <p>Assistant Professor, Technische Universität Wien, Austria</p>
+            <p>Interests: Geometric flows, Partial Differential Equations, Convex geometry</p>
+        </section>
+        <section id="publications" class="content">
+            <h2>Selected Publications</h2>
+            <ul>
+                <li>Prescribed Lp curvature problem (with Y. Hu), Adv. Math. 442 (2024): #109566.</li>
+                <li>On the uniqueness of solutions to the isotropic Lp dual Minkowski problem (with Y. Hu), Nonlinear Anal. 241 (2024): #113493.</li>
+                <!-- Add more publications here -->
+            </ul>
+        </section>
+        <section id="teaching" class="content">
+            <h2>Recent Teaching</h2>
+            <ul>
+                <li>Differential Geometry, S24</li>
+                <li>Curvature equations, W21, 23</li>
+                <!-- Add more teaching details here -->
+            </ul>
+        </section>
+        <section id="talks" class="content">
+            <h2>Talks</h2>
+            <ul>
+                <li>Bridging PDE and Geometric Flows, Cardiff University, Wales, July 22-26.</li>
+                <li>Current trends in Geometric flows, Montreal, Canada, June 25-29.</li>
+                <!-- Add more talks here -->
+            </ul>
+        </section>
+        <section id="contact" class="content">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:example@tuwien.ac.at">example@tuwien.ac.at</a></p>
+        </section>
     </div>
-    <div class="publication">
-        <p>On the uniqueness of solutions to the isotropic L<sup>p</sup> dual Minkowski problem (with Y. Hu), <em>Nonlinear Anal.</em> 241 (2024): #113493.</p>
-    </div>
-    <!-- Add more publications as needed -->
-
-    <h2>Recent Teaching in TU Wien</h2>
-    <ul>
-        <li>Differential Geometry, S24</li>
-        <li>Curvature equations, W21, 23</li>
-        <li>Curve shortening flow, W20, S23</li>
-        <li>Geometric analysis, W22</li>
-        <li>Mean curvature flow, S21</li>
-    </ul>
-
-    <h2>Recent Talks</h2>
-    <ul>
-        <li>Bridging PDE and Geometric Flows, Cardiff University, Wales, July 22-26, 2024</li>
-        <li>Current trends in Geometric flows, Montreal, Canada, June 25-29, 2024</li>
-        <li>41. Süddeutsches Kolloquium über Differentialgeometrie, Frankfurt, Germany, June 6-7, 2024</li>
-        <li>Conference on Convex Geometry and Related PDEs, Hunan University, China, May 10-18, 2024</li>
-        <!-- Add more talks as needed -->
-    </ul>
-
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:mohammad.ivaki@tuwien.ac.at">mohammad.ivaki@tuwien.ac.at</a></p>
 </body>
 </html>
