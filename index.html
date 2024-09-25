@@ -4,19 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammad N. Ivaki</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-    <link rel="stylesheet" type="text/css"
-    href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
-<style>
-body {
-  font-family: "Computer Modern Sans", sans-serif;
-}
-</style>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Computer Modern Sans", sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
@@ -95,17 +88,17 @@ body {
             display: flex; /* Use flexbox layout */
             align-items: center; /* Align items vertically centered */
             justify-content: space-between; /* Space between heading and image */
-            flex-wrap: wrap; /* Allow items to wrap on smaller screens */
         }
 
         .profile-image {
-            max-width: 150px; /* Limit the size of the image */
+            max-width: 120px; /* Limit the size of the image */
             border-radius: 10px; /* Rounded corners */
             margin-left: 20px; /* Space between image and heading */
         }
 
         .about-text {
             flex-grow: 1; /* Allow text to take available space */
+            text-align: left; /* Ensure text is aligned to the left */
         }
     </style>
 </head>
@@ -124,7 +117,6 @@ body {
             </div>
             <img src="image.jpg" alt="Mohammad N. Ivaki" class="profile-image">
         </section>
-        
         <section id="publications" class="content">
             <h2>Selected Publications</h2>
             <ul>
