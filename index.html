@@ -49,14 +49,13 @@
       margin-bottom: 20px;
       display: flex;
       align-items: center;
-      justify-content: flex-start; /* Changed to flex-start */
     }
 
     #about img.profile-image {
       max-width: 120px;
       height: auto;
       border-radius: 10px;
-      margin-right: 20px; /* Add margin for spacing */
+      margin-right: 20px;
     }
 
     #about img.logo {
@@ -69,28 +68,27 @@
     }
 
     #awards ul,
-    #talks ul,
-    #publications ul {
+    #talks ul {
       list-style-type: none;
       padding: 0;
     }
 
     #awards li,
-    #talks li,
-    #publications li {
+    #talks li {
+      display: flex;
+      align-items: flex-start;
       margin-bottom: 8px;
     }
 
-    /* Align awards list */
-    #awards li {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-    }
-
-    #awards li span.year {
-      width: 80px;
-      font-weight: bold;
+    #awards li::before,
+    #talks li::before {
+      content: attr(data-year);
+      display: inline-block;
+      width: 80px; /* Adjust this value to control the width of the year block */
+      flex-shrink: 0;
+      text-align: right;
+      padding-right: 10px;
+      color: black;
     }
 
     /* Responsive Styles */
@@ -163,57 +161,57 @@
       </ul>
     </section>
 
-    <section id="talks" class="content">
+<section id="talks" class="content">
   <h3>Talks</h3>
   <ul>
-    <li><span>07.2024.</span> Bridging PDE and Geometric Flows, Cardiff University, Wales.</li>
-    <li><span>06.2024.</span> Current trends in Geometric flows, Montreal, Canada.</li>
-    <li><span>06.2024.</span> 41. Süddeutsches Kolloquium über Differentialgeometrie, Frankfurt, Germany.</li>
-    <li><span>05.2024.</span> Conference on Convex Geometry and Related PDEs, Hunan University, China.</li>
-    <li><span>04.2024.</span> Warwick Analysis Seminar, Warwick University, UK.</li>
-    <li><span>12.2023.</span> Geometric Analysis Seminar, Vienna University, Austria.</li>
-    <li><span>11.2023.</span> Geometry Seminar, Friedrich-Schiller-Universität, Jena, Germany.</li>
-    <li><span>10.2023.</span> Erwin Schrödinger International Institute for Mathematics and Physics, Vienna, Austria.</li>
-    <li><span>05.2023.</span> Privatissimum of Differential Geometry and Applied Geometry Group, TU, Austria.</li>
-    <li><span>03.2023.</span> Privatissimum of Convex and Discrete Geometry Group, TU, Austria.</li>
-    <li><span>11.2022.</span> Privatissimum of Convex and Discrete Geometry Group, TU, Austria.</li>
-    <li><span>10.2020.</span> Privatissimum of Convex and Discrete Geometry Group, TU, Austria.</li>
-    <li><span>10.2020.</span> Geometric Analysis Seminar, University of Toronto, Canada.</li>
-    <li><span>12.2019.</span> CMS Winter Meeting, Geometric Analysis, Toronto, Canada.</li>
-    <li><span>11.2019.</span> Geometry & Topology seminar, University of Toronto, Canada.</li>
-    <li><span>02.2019.</span> Department Colloquium, University of Bath, England.</li>
-    <li><span>10.2018.</span> Geometric Analysis Colloquium, Fields Institute, Canada.</li>
-    <li><span>09.2018.</span> Postdoc Seminar, University of Toronto, Canada.</li>
-    <li><span>03.2018.</span> Workshop in Geometric Analysis, CRM, Montreal, Canada.</li>
-    <li><span>12.2017.</span> CMS Winter Meeting, Geometric Analysis, Waterloo, Canada.</li>
-    <li><span>09.2017.</span> Analysis and Applied Math Seminar, University of Toronto, Canada.</li>
-    <li><span>02.2017.</span> Analysis Seminar, Concordia University, Montreal, Canada.</li>
-    <li><span>02.2017.</span> Geometric Analysis Seminar, McGill University, Montreal, Canada.</li>
-    <li><span>10.2016.</span> Privatissimum of Convex and Discrete Geometry Group, TU, Austria.</li>
-    <li><span>11.2015.</span> Leibniz Universität, Hannover, Germany.</li>
-    <li><span>11.2015.</span> PDE Seminar, Konstanz University, Germany.</li>
-    <li><span>09.2015.</span> Affine Geometric Analysis, Oaxaca, Mexico.</li>
-    <li><span>01.2015.</span> Privatissimum of Convex and Discrete Geometry Group, TU, Austria.</li>
-    <li><span>11.2013.</span> Privatissimum of Convex and Discrete Geometry Group, TU, Austria.</li>
-    <li><span>10.2013.</span> Privatissimum of Convex and Discrete Geometry Group, TU, Austria.</li>
-    <li><span>09.2013.</span> Conference on Convex Geometry, Castro Urdiales, Spain.</li>
-    <li><span>05.2013.</span> XVI-th ISM-Quebec Student Conference, Montreal, Canada.</li>
-    <li><span>04.2012.</span> Workshop on Convexity and Asymptotic Geometric Analysis, CRM, Montreal, Canada.</li>
+    <li data-year="07.2024">Bridging PDE and Geometric Flows, Cardiff University, Wales.</li>
+    <li data-year="06.2024">Current Trends in Geometric Flows, Montreal, Canada.</li>
+    <li data-year="06.2024">41st Süddeutsches Kolloquium über Differentialgeometrie, Frankfurt, Germany.</li>
+    <li data-year="05.2024">Conference on Convex Geometry and Related PDEs, Hunan University, China.</li>
+    <li data-year="04.2024">Warwick Analysis Seminar, Warwick University, UK.</li>
+    <li data-year="12.2023">Geometric Analysis Seminar, Vienna University, Austria.</li>
+    <li data-year="11.2023">Geometry Seminar, Friedrich-Schiller-Universität, Jena, Germany.</li>
+    <li data-year="10.2023">Erwin Schrödinger International Institute for Mathematics and Physics, Vienna, Austria.</li>
+    <li data-year="05.2023">Privatissimum of Differential Geometry and Applied Geometry Group, TU, Austria.</li>
+    <li data-year="03.2023">Privatissimum of Convex and Discrete Geometry Group, TU, Austria.</li>
+    <li data-year="11.2022">Privatissimum of Convex and Discrete Geometry Group, TU, Austria.</li>
+    <li data-year="10.2020">Privatissimum of Convex and Discrete Geometry Group, TU, Austria.</li>
+    <li data-year="10.2020">Geometric Analysis Seminar, University of Toronto, Canada.</li>
+    <li data-year="12.2019">CMS Winter Meeting, Geometric Analysis, Toronto, Canada.</li>
+    <li data-year="11.2019">Geometry & Topology Seminar, University of Toronto, Canada.</li>
+    <li data-year="02.2019">Department Colloquium, University of Bath, England.</li>
+    <li data-year="10.2018">Geometric Analysis Colloquium, Fields Institute, Canada.</li>
+    <li data-year="09.2018">Postdoc Seminar, University of Toronto, Canada.</li>
+    <li data-year="03.2018">Workshop in Geometric Analysis, CRM, Montreal, Canada.</li>
+    <li data-year="12.2017">CMS Winter Meeting, Geometric Analysis, Waterloo, Canada.</li>
+    <li data-year="09.2017">Analysis and Applied Math Seminar, University of Toronto, Canada.</li>
+    <li data-year="02.2017">Analysis Seminar, Concordia University, Montreal, Canada.</li>
+    <li data-year="02.2017">Geometric Analysis Seminar, McGill University, Montreal, Canada.</li>
+    <li data-year="10.2016">Privatissimum of Convex and Discrete Geometry Group, TU, Austria.</li>
+    <li data-year="11.2015">Leibniz Universität, Hannover, Germany.</li>
+    <li data-year="11.2015">PDE Seminar, Konstanz University, Germany.</li>
+    <li data-year="09.2015">Affine Geometric Analysis, Oaxaca, Mexico.</li>
+    <li data-year="01.2015">Privatissimum of Convex and Discrete Geometry Group, TU, Austria.</li>
+    <li data-year="11.2013">Privatissimum of Convex and Discrete Geometry Group, TU, Austria.</li>
+    <li data-year="10.2013">Privatissimum of Convex and Discrete Geometry Group, TU, Austria.</li>
+    <li data-year="09.2013">Conference on Convex Geometry, Castro Urdiales, Spain.</li>
+    <li data-year="05.2013">XVI-th ISM-Quebec Student Conference, Montreal, Canada.</li>
+    <li data-year="04.2012">Workshop on Convexity and Asymptotic Geometric Analysis, CRM, Montreal, Canada.</li>
   </ul>
 </section>
 
 <section id="awards" class="content">
   <h3>Awards and Recognitions</h3>
   <ul>
-    <li><span>10.2023.</span> Best paper award 2022, Faculty of Mathematics and Geoinformation, TU Wien.</li>
-    <li><span>11.2022.</span> Austrian Science Fund (FWF) project, Award number P36545.</li>
-    <li><span>10.2022.</span> Best paper award 2021, Faculty of Mathematics and Geoinformation, TU Wien.</li>
-    <li><span>2017.</span> <a href="https://www.fields.utoronto.ca/honours-and-fellowships/jerrold-e-marsden-postdoctoral-fellows" target="_blank">Jerrold E. Marsden Fellowship</a>, Fields Institute. Know more about <a href="https://en.wikipedia.org/wiki/Jerrold_E._Marsden" target="_blank">J.E. Marsden!</a></li>
-    <li><span>10.2016.</span> Best paper award 2015, Faculty of Mathematics and Geoinformation, TU Wien.</li>
-    <li><span>2014-2016.</span> Lise Meitner program (Austrian Science Fund). Know more about <a href="https://en.wikipedia.org/wiki/Lise_Meitner" target="_blank">Lise Meitner!</a></li>
-    <li><span>2013.</span> The <a href="http://ism.uqam.ca/~ism/about/carl-herz-foundation/carl-herz-prize/" target="_blank">Carl Herz Prize</a>. Know more about <a href="https://en.wikipedia.org/wiki/Carl_S._Herz" target="_blank">Carl Herz!</a></li>
-    <li><span>2006.</span> Silver Medal: 30th Mathematics Competition for University Students, Tafresh, Iran.</li>
-    <li><span>2005.</span> Silver Medal: 29th Mathematics Competition for University Students, Mazandaran, Iran.</li>
+    <li data-year="10.2023">Best Paper Award 2022, Faculty of Mathematics and Geoinformation, TU Wien.</li>
+    <li data-year="11.2022">Austrian Science Fund (FWF) project, Award number P36545.</li>
+    <li data-year="10.2022">Best Paper Award 2021, Faculty of Mathematics and Geoinformation, TU Wien.</li>
+    <li data-year="2017"><a href="https://www.fields.utoronto.ca/honours-and-fellowships/jerrold-e-marsden-postdoctoral-fellows" target="_blank">Jerrold E. Marsden Fellowship</a>, Fields Institute. Learn more about <a href="https://en.wikipedia.org/wiki/Jerrold_E._Marsden" target="_blank">J.E. Marsden!</a></li>
+    <li data-year="10.2016">Best Paper Award 2015, Faculty of Mathematics and Geoinformation, TU Wien.</li>
+    <li data-year="2014"><a href="https://en.wikipedia.org/wiki/Lise_Meitner" target="_blank">Lise Meitner Program</a>, Austrian Science Fund.</li>
+    <li data-year="2013"><a href="http://ism.uqam.ca/~ism/about/carl-herz-foundation/carl-herz-prize/" target="_blank">Carl Herz Prize</a>. Learn more about <a href="https://en.wikipedia.org/wiki/Carl_S._Herz" target="_blank">Carl Herz!</a></li>
+    <li data-year="2006">Silver Medal: 30th Mathematics Competition for University Students, Tafresh, Iran.</li>
+    <li data-year="2005">Silver Medal: 29th Mathematics Competition for University Students, Mazandaran, Iran.</li>
   </ul>
 </section>
   </div>
