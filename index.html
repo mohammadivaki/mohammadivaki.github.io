@@ -68,23 +68,20 @@
     }
 
     #awards ul,
-    #talks ul,
-    #publications ul {
+    #talks ul {
       list-style-type: none;
       padding: 0;
     }
 
     #awards li,
-    #talks li,
-    #publications li {
+    #talks li {
       display: flex;
       align-items: flex-start;
       margin-bottom: 8px;
     }
 
     #awards li::before,
-    #talks li::before,
-    #publications li::before {
+    #talks li::before {
       content: attr(data-year);
       display: inline-block;
       width: 80px; /* Adjust this value to control the width of the year block */
@@ -94,17 +91,29 @@
       color: black;
     }
 
-    /* Border and shadow for sections */
+        /* Border and shadow for sections */
     #awards,
     #talks,
     #publications {
       border-left: 5px solid #00a0a0; /* Left border */
-      border-right: 5px solid #00a0a0; /* Right border */
       border-radius: 0 10px 10px 0; /* Rounded corners on the bottom */
       box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* Inner shadow effect */
       padding-left: 15px; /* Space for the left border */
-      padding-right: 15px; /* Space for the right border */
-    }
+    }    
+    
+    /* Border and shadow for sections */
+#awards,
+#talks,
+#publications {
+  border-left: 5px solid #00a0a0; /* Left border */
+  border-right: 5px solid #00a0a0; /* Right border */
+  border-radius: 0 10px 10px 0; /* Rounded corners on the bottom */
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* Inner shadow effect */
+  padding-left: 15px; /* Space for the left border */
+  padding-right: 15px; /* Space for the right border */
+}
+
+    
 
     /* Responsive Styles */
     @media (max-width: 768px) {
@@ -132,6 +141,7 @@
 </head>
 
 <body>
+
   <div class="container">
     <section id="about" class="content">
       <img src="image.jpg" alt="Mohammad N. Ivaki" class="profile-image">
