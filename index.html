@@ -11,7 +11,7 @@
   <style>
     body {
       font-family: "Computer Modern Sans", sans-serif;
-      line-height: 1.2;
+      line-height: 1.5;
       margin: 0;
       padding: 0;
       background-color: #dcdcdc;
@@ -34,57 +34,30 @@
       color: #00a0a0;
     }
 
-    h2,
-    h3 {
+    h2, h3 {
       margin-top: 0;
       margin-bottom: 10px;
     }
 
-    p,
-    li {
+    p, li {
       margin: 8px 0;
     }
 
-    #about {
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-    }
-
-    #about img.profile-image {
-      max-width: 120px;
-      height: auto;
-      border-radius: 10px;
-      margin-right: 20px;
-    }
-
-    #about img.logo {
-      max-width: 120px;
-      height: auto;
-    }
-
-    #about div {
-      flex: 1;
-    }
-
-    #awards ul,
-    #talks ul {
+    #awards ul, #talks ul {
       list-style-type: none;
       padding: 0;
     }
 
-    #awards li,
-    #talks li {
+    #awards li, #talks li {
       display: flex;
-      align-items: flex-start;
+      flex-direction: column; /* Stack items vertically */
       margin-bottom: 8px;
     }
 
-    #awards li::before,
-    #talks li::before {
+    #awards li::before, #talks li::before {
       content: attr(data-year);
       display: inline-block;
-      width: 80px; /* Adjust this value to control the width of the year block */
+      width: 80px;
       flex-shrink: 0;
       text-align: right;
       padding-right: 10px;
@@ -105,6 +78,10 @@
       #about img {
         margin-bottom: 20px;
       }
+
+      #awards li {
+        flex-direction: row; /* Switch back to row layout on larger screens */
+      }
     }
 
     @media (max-width: 480px) {
@@ -112,12 +89,16 @@
       #about img.logo {
         max-width: 100px;
       }
+
+      #awards li, #talks li {
+        flex-direction: column; /* Ensure items stack vertically on very small screens */
+        align-items: flex-start; /* Align items to start */
+      }
     }
   </style>
 </head>
 
 <body>
-
   <div class="container">
     <section id="about" class="content">
       <img src="image.jpg" alt="Mohammad N. Ivaki" class="profile-image">
@@ -201,28 +182,27 @@
 </section>
 
 <section id="awards" class="content">
-  <h3>Awards and Recognitions</h3>
-  <ul>
-    <li data-year="10.2023">Best Paper Award 2022, Faculty of Mathematics and Geoinformation, TU Wien.</li>
-    <li data-year="11.2022">Austrian Science Fund (FWF) project, Award number P36545.</li>
-    <li data-year="10.2022">Best Paper Award 2021, Faculty of Mathematics and Geoinformation, TU Wien.</li>
-    <li data-year="2017">
-      <a href="https://www.fields.utoronto.ca/honours-and-fellowships/jerrold-e-marsden-postdoctoral-fellows" target="_blank">Jerrold E. Marsden Fellowship</a>, 
-      Learn more about&nbsp;<a href="https://en.wikipedia.org/wiki/Jerrold_E._Marsden" target="_blank">J.E. Marsden</a>!
-    </li>
-    <li data-year="10.2016">Best Paper Award 2015, Faculty of Mathematics and Geoinformation, TU Wien.</li>
-    <li data-year="2014">
-      <a href="https://en.wikipedia.org/wiki/Lise_Meitner" target="_blank">Lise Meitner Program</a>, Austrian Science Fund.
-    </li>
-    <li data-year="2013">
-      <a href="http://ism.uqam.ca/~ism/about/carl-herz-foundation/carl-herz-prize/" target="_blank">Carl Herz Prize</a>. 
-      Learn more about&nbsp;<a href="https://en.wikipedia.org/wiki/Carl_S._Herz" target="_blank">Carl Herz</a>!
-    </li>
-    <li data-year="2006">Silver Medal: 30th Mathematics Competition for University Students, Tafresh, Iran.</li>
-    <li data-year="2005">Silver Medal: 29th Mathematics Competition for University Students, Mazandaran, Iran.</li>
-  </ul>
-</section>
-
+      <h3>Awards and Recognitions</h3>
+      <ul>
+        <li data-year="10.2023">Best Paper Award 2022, Faculty of Mathematics and Geoinformation, TU Wien.</li>
+        <li data-year="11.2022">Austrian Science Fund (FWF) project, Award number P36545.</li>
+        <li data-year="10.2022">Best Paper Award 2021, Faculty of Mathematics and Geoinformation, TU Wien.</li>
+        <li data-year="2017">
+          <a href="https://www.fields.utoronto.ca/honours-and-fellowships/jerrold-e-marsden-postdoctoral-fellows" target="_blank">Jerrold E. Marsden Fellowship</a>, 
+          Learn more about <a href="https://en.wikipedia.org/wiki/Jerrold_E._Marsden" target="_blank">J.E. Marsden</a>!
+        </li>
+        <li data-year="10.2016">Best Paper Award 2015, Faculty of Mathematics and Geoinformation, TU Wien.</li>
+        <li data-year="2014">
+          <a href="https://en.wikipedia.org/wiki/Lise_Meitner" target="_blank">Lise Meitner Program</a>, Austrian Science Fund.
+        </li>
+        <li data-year="2013">
+          <a href="http://ism.uqam.ca/~ism/about/carl-herz-foundation/carl-herz-prize/" target="_blank">Carl Herz Prize</a>. 
+          Learn more about <a href="https://en.wikipedia.org/wiki/Carl_S._Herz" target="_blank">Carl Herz</a>!
+        </li>
+        <li data-year="2006">Silver Medal: 30th Mathematics Competition for University Students, Tafresh, Iran.</li>
+        <li data-year="2005">Silver Medal: 29th Mathematics Competition for University Students, Mazandaran, Iran.</li>
+      </ul>
+    </section>
   </div>
 </body>
 
