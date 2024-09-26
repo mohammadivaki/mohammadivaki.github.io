@@ -11,20 +11,20 @@
   <style>
     body {
       font-family: "Computer Modern Sans", sans-serif;
-      line-height: 1.2;
+      line-height: 1.5; /* Increased for better readability */
       margin: 0;
       padding: 0;
       background-color: #dcdcdc;
     }
 
     .container {
-      width: 80%;
+      width: 90%; /* Adjusted for better mobile fit */
       margin: auto;
       overflow: hidden;
     }
 
     .content {
-      padding: 20px;
+      padding: 15px; /* Reduced padding for smaller screens */
       background: #f5f5f5;
       margin-top: 20px;
       border-radius: 10px;
@@ -32,34 +32,38 @@
 
     a {
       color: #00a0a0;
+      word-wrap: break-word; /* Prevent overflow of links */
     }
 
     h2,
     h3 {
       margin-top: 0;
       margin-bottom: 10px;
+      font-size: 1.5em; /* Responsive heading size */
     }
 
     p,
     li {
-      margin: 8px 0;
+      margin: 5px 0; /* Reduced margin for smaller items */
+      font-size: 1em; /* Responsive font size */
     }
 
     #about {
       margin-bottom: 20px;
       display: flex;
       align-items: center;
+      flex-direction: row; /* Keep row for larger screens */
     }
 
     #about img.profile-image {
-      max-width: 120px;
+      max-width: 100px; /* Adjust for smaller screens */
       height: auto;
       border-radius: 10px;
-      margin-right: 20px;
+      margin-right: 15px;
     }
 
     #about img.logo {
-      max-width: 120px;
+      max-width: 80px; /* Adjust for smaller screens */
       height: auto;
     }
 
@@ -82,7 +86,7 @@
 
     #awards li .year,
     #talks li .year {
-      width: 80px; /* Adjust this value to control the width of the year block */
+      width: 60px; /* Adjusted width for mobile */
       flex-shrink: 0;
       text-align: right;
       padding-right: 10px;
@@ -97,34 +101,44 @@
       border-right: 5px solid #00a0a0; /* Right border */
       border-radius: 0 10px 10px 0; /* Rounded corners on the bottom */
       box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* Inner shadow effect */
-      padding-left: 15px; /* Space for the left border */
-      padding-right: 15px; /* Space for the right border */
+      padding: 10px; /* Adjusted padding */
     }
 
     /* Responsive Styles */
     @media (max-width: 768px) {
       .container {
-        width: 95%;
+        width: 95%; /* Increased width for tablets */
       }
 
       #about {
-        flex-direction: column;
+        flex-direction: column; /* Column direction on smaller screens */
         align-items: flex-start;
       }
 
       #about img {
-        margin-bottom: 20px;
+        margin-bottom: 15px; /* Reduced margin */
       }
     }
 
     @media (max-width: 480px) {
       #about img.profile-image,
       #about img.logo {
-        max-width: 100px;
+        max-width: 80px; /* Further reduce image size for mobile */
+      }
+
+      h2,
+      h3 {
+        font-size: 1.2em; /* Smaller font size for headings */
+      }
+
+      p,
+      li {
+        font-size: 0.9em; /* Smaller font size for text */
       }
     }
   </style>
 </head>
+
 <body>
 
   <div class="container">
