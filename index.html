@@ -49,16 +49,14 @@
       margin-bottom: 20px;
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-      /* Changed to flex-start */
+      justify-content: flex-start; /* Changed to flex-start */
     }
 
     #about img.profile-image {
       max-width: 120px;
       height: auto;
       border-radius: 10px;
-      margin-right: 20px;
-      /* Add margin for spacing */
+      margin-right: 20px; /* Add margin for spacing */
     }
 
     #about img.logo {
@@ -83,23 +81,16 @@
       margin-bottom: 8px;
     }
 
-    /* Align the text after numbers in the awards section */
+    /* Align awards list */
     #awards li {
-      position: relative;
-      padding-left: 40px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
     }
 
-    #awards li::before {
-      content: counter(item) ". ";
-      counter-increment: item;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 35px; /* Ensure space for numbers */
-    }
-
-    #awards ul {
-      counter-reset: item;
+    #awards li span.year {
+      width: 80px;
+      font-weight: bold;
     }
 
     /* Responsive Styles */
@@ -119,7 +110,6 @@
     }
 
     @media (max-width: 480px) {
-
       #about img.profile-image,
       #about img.logo {
         max-width: 100px;
@@ -212,18 +202,18 @@
       </ul>
     </section>
 
-    <section id="awards" class="content">
+     <section id="awards" class="content">
       <h3>Awards and Recognitions</h3>
       <ul>
-        <li>10.2023. Best paper award 2022, Faculty of Mathematics and Geoinformation, TU Wien.</li>
-        <li>11.2022. Austrian Science Fund (FWF) project, Award number P36545.</li>
-        <li>10.2022. Best paper award 2021, Faculty of Mathematics and Geoinformation, TU Wien.</li>
-        <li>2017. <a href="https://www.fields.utoronto.ca/honours-and-fellowships/jerrold-e-marsden-postdoctoral-fellows" target="_blank">Jerrold E. Marsden Fellowship</a>, Fields Institute. Know more about <a href="https://en.wikipedia.org/wiki/Jerrold_E._Marsden" target="_blank">J.E. Marsden!</a></li>
-        <li>10.2016. Best paper award 2015, Faculty of Mathematics and Geoinformation, TU Wien.</li>
-        <li>2014-2016. Lise Meitner program (Austrian Science Fund). Know more about <a href="https://en.wikipedia.org/wiki/Lise_Meitner" target="_blank">Lise Meitner!</a></li>
-        <li>2013. The <a href="http://ism.uqam.ca/~ism/about/carl-herz-foundation/carl-herz-prize/" target="_blank">Carl Herz Prize</a>. Know more about <a href="https://en.wikipedia.org/wiki/Carl_S._Herz" target="_blank">Carl Herz!</a></li>
-        <li>2006. Silver Medal: 30th Mathematics Competition for University Students, Tafresh, Iran.</li>
-        <li>2005. Silver Medal: 29th Mathematics Competition for University Students, Mazandaran, Iran.</li>
+        <li><span class="year">10.2023</span>Best paper award 2022, Faculty of Mathematics and Geoinformation, TU Wien.</li>
+        <li><span class="year">11.2022</span>Austrian Science Fund (FWF) project, Award number P36545.</li>
+        <li><span class="year">10.2022</span>Best paper award 2021, Faculty of Mathematics and Geoinformation, TU Wien.</li>
+        <li><span class="year">2017</span><a href="https://www.fields.utoronto.ca/honours-and-fellowships/jerrold-e-marsden-postdoctoral-fellows" target="_blank">Jerrold E. Marsden Fellowship</a>, Fields Institute. Know more about <a href="https://en.wikipedia.org/wiki/Jerrold_E._Marsden" target="_blank">J.E. Marsden!</a></li>
+        <li><span class="year">10.2016</span>Best paper award 2015, Faculty of Mathematics and Geoinformation, TU Wien.</li>
+        <li><span class="year">2014-2016</span>Lise Meitner program (Austrian Science Fund). Know more about <a href="https://en.wikipedia.org/wiki/Lise_Meitner" target="_blank">Lise Meitner!</a></li>
+        <li><span class="year">2013</span>The <a href="http://ism.uqam.ca/~ism/about/carl-herz-foundation/carl-herz-prize/" target="_blank">Carl Herz Prize</a>. Know more about <a href="https://en.wikipedia.org/wiki/Carl_S._Herz" target="_blank">Carl Herz!</a></li>
+        <li><span class="year">2006</span>Silver Medal: 30th Mathematics Competition for University Students, Tafresh, Iran.</li>
+        <li><span class="year">2005</span>Silver Medal: 29th Mathematics Competition for University Students, Mazandaran, Iran.</li>
       </ul>
     </section>
   </div>
