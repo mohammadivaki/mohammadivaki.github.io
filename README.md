@@ -1,4 +1,4 @@
-# Mathematician's Website
+# Mohammad N. Ivaki's Website
 
-This is a simple website for a simple Mathematician.
+This is my website, Mohammad N. Ivaki.
 
