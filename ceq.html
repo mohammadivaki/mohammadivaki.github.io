@@ -4,60 +4,98 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Curvature Equations</title>
-  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
+  
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
   <style>
+    /* Computer Modern Font Faces */
+    @font-face {
+      font-family: "Computer Modern";
+      src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf') format('opentype');
+    }
+
+    @font-face {
+      font-family: "Computer Modern";
+      src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsx.otf') format('opentype');
+      font-weight: bold;
+    }
+
+    @font-face {
+      font-family: "Computer Modern";
+      src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsi.otf') format('opentype');
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: "Computer Modern";
+      src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunbxo.otf') format('opentype');
+      font-weight: bold;
+      font-style: italic;
+    }
+
     body {
-      font-family: "Computer Modern Sans", sans-serif;
+      font-family: "Computer Modern", sans-serif;
       line-height: 1.2;
       margin: 0;
       padding: 0;
       background-color: #dcdcdc;
     }
+
     .container {
       width: 80%;
       margin: auto;
       overflow: hidden;
     }
+
     .content {
       padding: 20px;
       background: #f5f5f5;
       margin-top: 20px;
       border-radius: 10px;
     }
+
     a {
       color: #00a0a0;
     }
+
     h2, h3, h4 {
       margin-top: 0;
       margin-bottom: 10px;
     }
+
     p, li {
       margin: 8px 0;
     }
+
     #about {
       margin-bottom: 20px;
-      display: block; /* Changed to block to stack elements vertically */
+      display: block;
     }
+
     #about img.logo {
       max-width: 120px;
       height: auto;
       margin-left: 20px;
     }
+
     #about div {
       flex: 1;
     }
+
     #course ul {
       list-style-type: none;
       padding: 0;
     }
+
     #course li {
       margin-bottom: 8px;
     }
+
     #course s {
       color: gray;
     }
+
     @media (max-width: 768px) {
       .container {
         width: 95%;
@@ -70,6 +108,7 @@
         margin-bottom: 20px;
       }
     }
+
     @media (max-width: 480px) {
       #about img.logo {
         max-width: 100px;
@@ -95,9 +134,8 @@
         the \( L_p \)-Minkowski and Christoffel-Minkowski problems.
       </p>
 
- 
-     <h4>Lecture Notes:</h4>
-<p><a href="Geometric%20PDEs.pdf" target="_blank">Geometric PDEs</a></p>
+      <h4>Lecture Notes:</h4>
+      <p><a href="Geometric%20PDEs.pdf" target="_blank">Geometric PDEs</a></p>
 
       <h4>Method of Assessment:</h4>
       <p>Oral examination</p>
