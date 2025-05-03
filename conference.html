@@ -38,7 +38,10 @@
     }
     #about {
       margin-bottom: 20px;
-      display: block; /* Changed to block to stack elements vertically */
+      display: block;
+    }
+    #about .about-text {
+      text-align: center;
     }
     #about img.logo {
       max-width: 120px;
@@ -80,19 +83,17 @@
 <body>
   <div class="container">
     <section id="about" class="content">
-      <p><strong>Österreichisches und Süddeutsches Kolloquium zur Differentialgeometrie</strong></p>
-      <p><strong>7-8 July 2025</strong></p>
+      <div class="about-text">
+        <p><strong>Österreichisches und Süddeutsches Kolloquium zur Differentialgeometrie</strong></p>
+        <p><strong>7–8 July 2025</strong></p>
+      </div>
     </section>
 
     <section id="talks" class="content">
-
       <h4>Talks</h4>
       <ul>
         <li>Speaker : title</li>
-      <p>
-   Abstract:
-      </p>
-
+        <p>Abstract:</p>
       </ul>
     </section>
   </div>
