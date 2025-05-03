@@ -1,91 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Österreichisches und Süddeutsches Kolloquium zur Differentialgeometrie</title>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/bitmaks/cm-web-fonts@latest/fonts.css">
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <style>
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #3f627d;
+      --accent-color: #8b0000;
+      --light-bg: #f8f9fa;
+      --border-color: #e0e0e0;
+    }
+
     body {
       font-family: "Computer Modern Sans", sans-serif;
-      line-height: 1.4;
+      line-height: 1.6;
       margin: 0;
-      padding: 0;
-      background-color: #dcdcdc;
+      padding: 20px 0;
+      background-color: #ffffff;
+      color: #333;
     }
+
     .container {
-      width: 80%;
-      margin: auto;
-      overflow: hidden;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
+
     .content {
-      padding: 20px;
-      background: #f5f5f5;
-      margin-top: 20px;
-      border-radius: 10px;
+      padding: 2rem;
+      background: white;
+      margin: 2rem 0;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border-color);
     }
-    a {
-      color: #00a0a0;
-    }
-    h2, h3, h4 {
+
+    h1, h2, h3, h4 {
+      color: var(--primary-color);
+      font-weight: 600;
       margin-top: 0;
-      margin-bottom: 10px;
-    }
-    p {
-      margin: 8px 0;
     }
 
-    /* Title section */
-    #about {
-      text-align: center;
+    h2 {
+      border-bottom: 2px solid var(--secondary-color);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
     }
 
-    /* Schedule table */
+    /* Schedule Table */
     .schedule-table {
       width: 100%;
       border-collapse: collapse;
-      background: white;
-    }
-    .schedule-table th,
-    .schedule-table td {
-      border: 1px solid black;
-      padding: 8px;
-      vertical-align: top;
-    }
-    .schedule-table th {
-      background-color: #f0f0f0;
-      text-align: center;
-    }
-    .schedule-table td:nth-child(1),
-    .schedule-table td:nth-child(3) {
-      width: 10%;
-      font-weight: bold;
-      text-align: right;
-      white-space: nowrap;
-    }
-    .schedule-table td:nth-child(2),
-    .schedule-table td:nth-child(4) {
-      width: 40%;
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+      table-layout: fixed;
     }
 
-    /* Talks section */
-    .talk {
-      margin-bottom: 20px;
+    .schedule-table thead {
+      background-color: var(--primary-color);
+      color: white;
+      border-bottom: 2px solid var(--primary-color);
     }
-    .talk p {
-      margin: 4px 0;
+
+    .schedule-table th,
+    .schedule-table td {
+      padding: 1rem;
+      text-align: left;
+      vertical-align: top;
+      border-right: 1px solid var(--border-color);
+    }
+
+    .schedule-table th:last-child,
+    .schedule-table td:last-child {
+      border-right: none;
+    }
+
+    .schedule-table th {
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .schedule-table tbody tr {
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .schedule-table tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .time-column {
+      width: 12%;
+      font-weight: 600;
+      color: var(--secondary-color);
+    }
+
+    .event-column {
+      width: 38%;
+    }
+
+    .mathjax-preview {
+      background-color: var(--light-bg);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+
+    /* Academic accents */
+    .affiliation {
+      color: var(--secondary-color);
+      font-size: 0.9em;
+    }
+
+    .abstract {
+      background-color: var(--light-bg);
+      padding: 1rem;
+      border-left: 3px solid var(--secondary-color);
+      margin: 1rem 0;
     }
 
     @media (max-width: 768px) {
       .container {
-        width: 95%;
+        padding: 0 15px;
       }
-    }
-    @media (max-width: 480px) {
-      .schedule-table, .schedule-table td, .schedule-table th {
-        font-size: 14px;
+
+      .schedule-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+
+      .content {
+        padding: 1.5rem;
       }
     }
   </style>
@@ -93,57 +145,121 @@
 <body>
   <div class="container">
 
-    <!-- Title -->
-    <section id="about" class="content">
-      <p><strong>Österreichisches und Süddeutsches Kolloquium zur Differentialgeometrie</strong></p>
-      <p><strong>7–8 July 2025</strong></p>
-    </section>
+    <!-- Header -->
+    <header class="content" id="about">
+      <h1>Österreichisches und Süddeutsches<br>Kolloquium zur Differentialgeometrie</h1>
+      <p style="font-size: 1.2rem; color: var(--secondary-color); margin-top: 0.5rem;">July 7–8, 2025</p>
+    </header>
 
     <!-- Schedule -->
-<section id="schedule" class="content">
-  <h4>Schedule</h4>
-  <table class="schedule-table">
-    <thead>
-      <tr>
-        <th class="time">Time</th>
-        <th>Thursday</th>
-        <th class="divider"></th>
-        <th class="time">Time</th>
-        <th>Friday</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>9:45</td><td>Welcome</td><td class="divider"></td><td>9:00</td><td><strong>Ivaki</strong></td></tr>
-      <tr><td>10:00</td><td><strong>Mäder-Baumdicker</strong></td><td class="divider"></td><td>10:00</td><td><strong>Dott</strong></td></tr>
-      <tr><td></td><td></td><td class="divider"></td><td>10:45</td><td>Coffee</td></tr>
-      <tr><td>11:00</td><td><strong>Große</strong></td><td class="divider"></td><td>11:15</td><td><strong>Nepechiy</strong></td></tr>
-      <tr><td>12:00</td><td>Lunch</td><td class="divider"></td><td>12:00</td><td>Lunch</td></tr>
-      <tr><td>14:00</td><td><strong>Henkel</strong></td><td class="divider"></td><td>13:30</td><td><strong>Kusner</strong></td></tr>
-      <tr><td>14:45</td><td><strong>Balado-Alves</strong></td><td class="divider"></td><td>14:30</td><td><strong>Hu</strong></td></tr>
-      <tr><td>15:30</td><td>Coffee</td><td class="divider"></td><td>15:30</td><td><strong>Burtscher</strong></td></tr>
-      <tr><td>16:00</td><td><strong>Ketterer</strong></td><td class="divider"></td><td>16:30</td><td><em>The End!</em></td></tr>
-      <tr><td>17:00</td><td><strong>König</strong></td><td class="divider"></td><td></td><td></td></tr>
-      <tr><td>19:00</td><td>Dinner<br><small>@ “Paulaner am Dom”</small></td><td class="divider"></td><td></td><td></td></tr>
-    </tbody>
-  </table>
-</section>
+    <section class="content" id="schedule">
+      <h2>Program Schedule</h2>
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th class="time-column">Time</th>
+            <th class="event-column">Thursday</th>
+            <th class="time-column">Time</th>
+            <th class="event-column">Friday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>09:45</td>
+            <td>Welcome Address</td>
+            <td>09:00</td>
+            <td><strong>M. Ivaki</strong><br>Hyperbolic Structures on Manifolds</td>
+          </tr>
+          <tr>
+            <td>10:00</td>
+            <td><strong>E. Mäder-Baumdicker</strong><br>Minimal Surfaces in \(\mathbb{R}^3\)</td>
+            <td>10:00</td>
+            <td><strong>J. Dott</strong><br>Ricci Flow Applications</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>10:45</td>
+            <td>Coffee Break</td>
+          </tr>
+          <tr>
+            <td>11:00</td>
+            <td><strong>L. Große</strong><br>Spin Geometry and Dirac Operators</td>
+            <td>11:15</td>
+            <td><strong>A. Nepechiy</strong><br>Symplectic Topology</td>
+          </tr>
+          <tr>
+            <td>12:00</td>
+            <td>Lunch</td>
+            <td>12:00</td>
+            <td>Lunch</td>
+          </tr>
+          <tr>
+            <td>14:00</td>
+            <td><strong>P. Henkel</strong><br>\(G_2\)-Holonomy Metrics</td>
+            <td>13:30</td>
+            <td><strong>R. Kusner</strong><br>Willmore Surfaces</td>
+          </tr>
+          <tr>
+            <td>14:45</td>
+            <td><strong>C. Balado-Alves</strong><br>Geometric Analysis</td>
+            <td>14:30</td>
+            <td><strong>D. Hu</strong><br>Kähler-Einstein Metrics</td>
+          </tr>
+          <tr>
+            <td>15:30</td>
+            <td>Coffee Break</td>
+            <td>15:30</td>
+            <td><strong>A. Burtscher</strong><br>Sub-Riemannian Geometry</td>
+          </tr>
+          <tr>
+            <td>16:00</td>
+            <td><strong>C. Ketterer</strong><br>Optimal Transport</td>
+            <td>16:30</td>
+            <td>Closing Remarks</td>
+          </tr>
+          <tr>
+            <td>17:00</td>
+            <td><strong>G. König</strong><br>Geometric Flows</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>19:00</td>
+            <td>Conference Dinner<br><small>@ “Paulaner am Dom”</small></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
     <!-- Talks -->
-    <section id="talks" class="content">
-      <h4>Talks</h4>
-
+    <section class="content" id="talks">
+      <h2>Invited Lectures</h2>
+      
       <div class="talk">
-        <p><strong>09:00</strong> — <strong>0</strong>: <em>Title of the Talk</em></p>
-        <p><strong>Abstract:</strong> .</p>
+        <h3>Ricci Flow Applications</h3>
+        <p><strong>Speaker:</strong> J. Dott (University of Bonn)</p>
+        <div class="abstract">
+          <p>Consider the Ricci flow equation:</p>
+          <div class="mathjax-preview">
+            \[
+            \frac{\partial g}{\partial t} = -2\text{Ric}(g)
+            \]
+          </div>
+          <p>We will discuss recent developments in the analysis of singularities...</p>
+        </div>
       </div>
 
-      <!-- Add more talks similarly -->
+      <!-- Add more talks following the same structure -->
     </section>
 
     <!-- Practical Info -->
-    <section id="practical-info" class="content">
-      <h4>Practical Information</h4>
-      <p><strong>How to Get Here:</strong> The venue is easily accessible by train and by airport shuttle from Example International Airport.</p>
+    <section class="content" id="practical-info">
+      <h2>Practical Information</h2>
+      <p><strong>Location:</strong> Mathematical Institute, University of Vienna</p>
+      <p><strong>Transportation:</strong> The venue is accessible via U2 subway line (Schottentor station).</p>
     </section>
 
   </div>
