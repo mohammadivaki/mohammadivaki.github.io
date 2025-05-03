@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Österreichisches und Süddeutsches Kolloquium zur Differentialgeometrie</title>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/bitmaks/cm-web-fonts@latest/fonts.css">
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -10,7 +10,7 @@
   <style>
     body {
       font-family: "Computer Modern Sans", sans-serif;
-      line-height: 1.2;
+      line-height: 1.4;
       margin: 0;
       padding: 0;
       background-color: #dcdcdc;
@@ -33,74 +33,130 @@
       margin-top: 0;
       margin-bottom: 10px;
     }
-    p, li {
+    p {
       margin: 8px 0;
     }
+
+    /* Title section */
     #about {
-      margin-bottom: 20px;
-      display: block;
-    }
-    #about .about-text {
       text-align: center;
     }
-    #about img.logo {
-      max-width: 120px;
-      height: auto;
-      margin-left: 20px;
+
+    /* Schedule table */
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
     }
-    #about div {
-      flex: 1;
+    .schedule-table th,
+    .schedule-table td {
+      border: 1px solid black;
+      padding: 8px;
+      vertical-align: top;
     }
-    #course ul {
-      list-style-type: none;
-      padding: 0;
+    .schedule-table th {
+      background-color: #f0f0f0;
+      text-align: center;
     }
-    #course li {
-      margin-bottom: 8px;
+    .schedule-table td:nth-child(1),
+    .schedule-table td:nth-child(3) {
+      width: 10%;
+      font-weight: bold;
+      text-align: right;
+      white-space: nowrap;
     }
-    #course s {
-      color: gray;
+    .schedule-table td:nth-child(2),
+    .schedule-table td:nth-child(4) {
+      width: 40%;
     }
+
+    /* Talks section */
+    .talk {
+      margin-bottom: 20px;
+    }
+    .talk p {
+      margin: 4px 0;
+    }
+
     @media (max-width: 768px) {
       .container {
         width: 95%;
       }
-      #about {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      #about img {
-        margin-bottom: 20px;
-      }
     }
     @media (max-width: 480px) {
-      #about img.logo {
-        max-width: 100px;
+      .schedule-table, .schedule-table td, .schedule-table th {
+        font-size: 14px;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
+
+    <!-- Title -->
     <section id="about" class="content">
-      <div class="about-text">
-        <p><strong>Österreichisches und Süddeutsches Kolloquium zur Differentialgeometrie</strong></p>
-        <p><strong>7–8 July 2025, Technische Universität Wien</strong></p>
-      </div>
+      <p><strong>Österreichisches und Süddeutsches Kolloquium zur Differentialgeometrie</strong></p>
+      <p><strong>7–8 July 2025</strong></p>
     </section>
 
+    <!-- Schedule -->
+    <section id="schedule" class="content">
+      <h4>Schedule</h4>
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Thursday</th>
+            <th></th>
+            <th>Friday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>9:45</td><td>Welcome<br><strong>Mäder-Baumdicker</strong></td><td></td><td><strong>Ivaki</strong></td></tr>
+          <tr><td>10:00</td><td></td><td></td><td><strong>Dott</strong></td></tr>
+          <tr><td>10:45</td><td></td><td></td><td>Coffee</td></tr>
+          <tr><td>11:00</td><td><strong>Große</strong></td><td></td><td></td></tr>
+          <tr><td>11:15</td><td></td><td></td><td><strong>Nepechiy</strong></td></tr>
+          <tr><td>12:00</td><td>Lunch</td><td></td><td>Lunch</td></tr>
+          <tr><td>13:30</td><td></td><td></td><td><strong>Kusner</strong></td></tr>
+          <tr><td>14:00</td><td><strong>Henkel</strong></td><td></td><td></td></tr>
+          <tr><td>14:30</td><td></td><td></td><td><strong>Hu</strong></td></tr>
+          <tr><td>14:45</td><td><strong>Balado-Alves</strong></td><td></td><td></td></tr>
+          <tr><td>15:30</td><td>Coffee</td><td></td><td><strong>Burtscher</strong></td></tr>
+          <tr><td>16:00</td><td><strong>Ketterer</strong></td><td></td><td></td></tr>
+          <tr><td>16:30</td><td></td><td></td><td><em>The End!</em></td></tr>
+          <tr><td>17:00</td><td><strong>König</strong></td><td></td><td></td></tr>
+          <tr><td>19:00</td><td>Dinner<br>@ “Paulaner am Dom”</td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Talks -->
     <section id="talks" class="content">
       <h4>Talks</h4>
-      <ul>
-        <li>Speaker : title</li>
-        <p>Abstract:</p>
-      </ul>
+
+      <div class="talk">
+        <p><strong>09:45</strong> — <strong>Mäder-Baumdicker</strong>: <em>Title of the Talk</em></p>
+        <p><strong>Abstract:</strong> This talk will explore aspects of modern differential geometry with applications to manifold theory.</p>
+      </div>
+
+      <div class="talk">
+        <p><strong>10:30</strong> — <strong>Große</strong>: <em>Curvature Problems in Geometric Analysis</em></p>
+        <p><strong>Abstract:</strong> We investigate curvature prescription problems and variational methods in Riemannian geometry.</p>
+      </div>
+
+      <!-- Add more talks similarly -->
     </section>
 
+    <!-- Practical Info -->
     <section id="practical-info" class="content">
       <h4>Practical Information</h4>
-      <p><strong>Getting to the Venue:</strong> .</p>
+      <p><strong>Venue:</strong> University of Example, Math Department, Example City</p>
+      <p><strong>Accommodation:</strong> A list of recommended hotels will be provided soon.</p>
+      <p><strong>How to Get Here:</strong> The venue is easily accessible by train and by airport shuttle from Example International Airport.</p>
+      <p><strong>Contact:</strong> Please email <a href="mailto:organizers@example.com">organizers@example.com</a> for questions.</p>
     </section>
+
   </div>
 </body>
 </html>
