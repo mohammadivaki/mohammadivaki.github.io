@@ -54,10 +54,26 @@
       flex: 1;
     }
 
+    .logo-organizers-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-left: 2rem;
+    }
+
     .logo {
       max-width: 150px;
       height: auto;
-      margin-left: 2rem;
+    }
+
+    .organizers {
+      color: var(--accent-color);
+      font-size: 0.95rem;
+      margin-top: 0.8rem;
+      text-align: right;
+      font-style: italic;
+      border-top: 2px solid var(--border-color);
+      padding-top: 0.5rem;
     }
 
     h1, h2, h3, h4 {
@@ -152,10 +168,20 @@
         align-items: flex-start;
       }
 
-      .logo {
+      .logo-organizers-wrapper {
+        align-items: flex-start;
         margin-left: 0;
-        margin-top: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      .logo {
         max-width: 120px;
+      }
+
+      .organizers {
+        text-align: left;
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
       }
 
       .schedule-table {
@@ -179,7 +205,10 @@
           <h1>42. Österreichisches und Süddeutsches<br>Kolloquium zur Differentialgeometrie</h1>
           <p style="font-size: 1.2rem; color: var(--secondary-color); margin-top: 0.5rem;">July 7–8, 2025</p>
         </div>
-        <img src="TU-Logo.png" alt="TU Wien Logo" class="logo">
+        <div class="logo-organizers-wrapper">
+          <img src="TU-Logo.png" alt="TU Wien Logo" class="logo">
+          <p class="organizers">Organizers:<br>Mohammad N. Ivaki, Ivan Izmestiev</p>
+        </div>
       </div>
     </header>
 
