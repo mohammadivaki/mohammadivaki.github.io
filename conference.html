@@ -158,6 +158,18 @@
       border-radius: 3px;
     }
 
+    .speaker-link {
+      color: var(--primary-color);
+      cursor: pointer;
+      text-decoration: none;
+      border-bottom: 1px dashed var(--secondary-color);
+    }
+    
+    .speaker-link:hover {
+      color: var(--accent-color);
+      border-bottom-style: solid;
+    }
+
     @media (max-width: 768px) {
       .container {
         padding: 0 15px;
@@ -225,17 +237,24 @@
           </tr>
         </thead>
         <tbody>
+          <!-- Added Welcome Address at 8:55 -->
+          <tr>
+            <td>8:55</td>
+            <td>Welcome Address</td>
+            <td></td>
+            <td></td>
+          </tr>
           <tr>
             <td>9:00</td>
-            <td><strong>Clemens Sämann</strong><br>Non-smooth spacetime geometry via metric (measure) geometry</td>
+            <td><a href="#talk-saemann" class="speaker-link"><strong>Clemens Sämann</strong></a><br>Non-smooth spacetime geometry via metric (measure) geometry</td>
             <td>9:00</td>
-            <td><strong>Esther Cabezas-Rivas</strong><br>The ROF model for image denoising (beyond flatland)</td>
+            <td><a href="#talk-cabezasrivas" class="speaker-link"><strong>Esther Cabezas-Rivas</strong></a><br>The ROF model for image denoising (beyond flatland)</td>
           </tr>
           <tr>
             <td>10:00</td>
-            <td><strong>Julian Scheuer</strong><br>Mean curvature flow in null hypersurfaces</td>
+            <td><a href="#talk-scheuer" class="speaker-link"><strong>Julian Scheuer</strong></a><br>Mean curvature flow in null hypersurfaces</td>
             <td>10:00</td>
-            <td><strong>Gudrun Szewieczek</strong><br>Isothermic annuli and snapping mechanisms from elastic curves</td>
+            <td><a href="#talk-szewieczek" class="speaker-link"><strong>Gudrun Szewieczek</strong></a><br>Isothermic annuli and snapping mechanisms from elastic curves</td>
           </tr>
           <tr>
             <td>11:00</td>
@@ -245,9 +264,9 @@
           </tr>
           <tr>
             <td>11:30</td>
-            <td><strong>Anna Dall’acqua</strong><br>On the free boundary elastic flow</td>
+            <td><a href="#talk-dallacqua" class="speaker-link"><strong>Anna Dall'Acqua</strong></a><br>On the free boundary elastic flow</td>
             <td>11:30</td>
-            <td><strong>Thomas Koerber</strong><br>The Penrose inequality in extrinsic geometry</td>
+            <td><a href="#talk-koerber" class="speaker-link"><strong>Thomas Koerber</strong></a><br>The Penrose inequality in extrinsic geometry</td>
           </tr>
           <tr>
             <td>12:30</td>
@@ -257,15 +276,15 @@
           </tr>
           <tr>
             <td>14:00</td>
-            <td><strong>Philipp Reiter</strong><br>Modeling self-repulsion of geometric objects</td>
+            <td><a href="#talk-reiter" class="speaker-link"><strong>Philipp Reiter</strong></a><br>Modeling self-repulsion of geometric objects</td>
             <td>14:00</td>
-            <td><strong>Roman Prosanov</strong><br>Projective background of (2+1)-spacetimes of constant curvature</td>
+            <td><a href="#talk-prosanov" class="speaker-link"><strong>Roman Prosanov</strong></a><br>Projective background of (2+1)-spacetimes of constant curvature</td>
           </tr>
           <tr>
             <td>15:00</td>
-            <td><strong>Elias Döhrer</strong><br>Incorporating Self-Repulsion into Riemannian metrics</td>
+            <td><a href="#talk-doehrer" class="speaker-link"><strong>Elias Döhrer</strong></a><br>Incorporating Self-Repulsion into Riemannian metrics</td>
             <td>15:00</td>
-            <td><strong>Volker Branding</strong><br>On biharmonic and conformal biharmonic maps to spheres</td>
+            <td><a href="#talk-branding" class="speaker-link"><strong>Volker Branding</strong></a><br>On biharmonic and conformal biharmonic maps to spheres</td>
           </tr>
           <tr>
             <td>16:00</td>
@@ -275,7 +294,7 @@
           </tr>
           <tr>
             <td>16:30</td>
-            <td><strong>Denis Polly</strong><br>Surfaces in isotropic geometries</td>
+            <td><a href="#talk-polly" class="speaker-link"><strong>Denis Polly</strong></a><br>Surfaces in isotropic geometries</td>
           </tr>
           <tr>
             <td>19:00</td>
@@ -290,7 +309,7 @@
   <h2>Talks</h2>
 
     <!-- Clemens Sämann Talk -->
-  <div class="talk">
+  <div class="talk" id="talk-saemann">
     <h3 class="talk-title">Non-smooth spacetime geometry via metric (measure) geometry</h3>
     <div class="speaker-info">
        Clemens Sämann (University of Vienna)<br>
@@ -302,7 +321,7 @@
   </div>
 
     <!-- Julian Scheuer Talk -->
-  <div class="talk">
+  <div class="talk" id="talk-scheuer">
     <h3 class="talk-title">Mean curvature flow in null hypersurfaces</h3>
     <div class="speaker-info">
        Julian Scheuer (Goethe Universität Frankfurt)<br>
@@ -314,7 +333,7 @@
   </div>
 
     <!-- Anna Dall'Acqua Talk -->
-  <div class="talk">
+  <div class="talk" id="talk-dallacqua">
     <h3 class="talk-title">On the free boundary elastic flow</h3>
     <div class="speaker-info">
        Anna Dall'Acqua (Ulm University)<br>
@@ -326,7 +345,7 @@
   </div>
 
     <!-- Philipp Reiter Talk -->
-  <div class="talk">
+  <div class="talk" id="talk-reiter">
     <h3 class="talk-title">Modeling self-repulsion of geometric objects</h3>
     <div class="speaker-info">
        Philipp Reiter (TU Chemnitz)<br>
@@ -338,7 +357,7 @@
   </div>
 
     <!-- Elias Döhrer Talk -->
-  <div class="talk">
+  <div class="talk" id="talk-doehrer">
     <h3 class="talk-title">Incorporating Self-Repulsion into Riemannian metrics</h3>
     <div class="speaker-info">
        Elias Döhrer (TU Chemnitz)<br>
@@ -351,7 +370,7 @@
   </div>
 
     <!-- Denis Polly Talk -->
-  <div class="talk">
+  <div class="talk" id="talk-polly">
     <h3 class="talk-title">Surfaces in isotropic geometries</h3>
     <div class="speaker-info">
        Denis Polly (TU Wien)<br>
@@ -366,7 +385,7 @@
   </div>
 
         <!-- Esther Cabezas-Rivas Talk -->
-  <div class="talk">
+  <div class="talk" id="talk-cabezasrivas">
     <h3 class="talk-title">The ROF model for image denoising (beyond flatland)</h3>
     <div class="speaker-info">
        Esther Cabezas-Rivas (Universitat de València)<br>
@@ -388,7 +407,7 @@
   </div>
 
       <!-- Gudrun Szewieczek Talk -->
-  <div class="talk">
+  <div class="talk" id="talk-szewieczek">
     <h3 class="talk-title">Isothermic annuli and snapping mechanisms from elastic curves</h3>
     <div class="speaker-info">
        Gudrun Szewieczek (Universität Innsbruck)<br>
@@ -407,7 +426,7 @@
   </div>
 
     <!-- Thomas Koerber Talk -->
-  <div class="talk">
+  <div class="talk" id="talk-koerber">
     <h3 class="talk-title">The Penrose inequality in extrinsic geometry</h3>
     <div class="speaker-info">
        Thomas Koerber (University of Vienna)<br>
@@ -419,7 +438,7 @@
   </div>
 
       <!-- Roman Prosanov Talk -->
-  <div class="talk">
+  <div class="talk" id="talk-prosanov">
     <h3 class="talk-title">Projective background of (2+1)-spacetimes of constant curvature</h3>
     <div class="speaker-info">
        Roman Prosanov (TU Wien)<br>
@@ -434,7 +453,7 @@
 
   
   <!-- Volker Branding Talk -->
-  <div class="talk">
+  <div class="talk" id="talk-branding">
     <h3 class="talk-title">On biharmonic and conformal biharmonic maps to spheres</h3>
     <div class="speaker-info">
        Volker Branding (University of Vienna)<br>
